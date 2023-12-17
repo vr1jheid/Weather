@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/styles.css">
+  <title>Погода</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="search-city">
+      <input class="search-input" type="text">
+      <button class="search-button">
+        <img class="search-img" src="/images/search.svg">
+      </button>
+    </div>
+    <div class="weather">
+      <div class="city"></div>
+
+      <div class="main-info">
+        <div class="img-container">
+          <img src="/images/loading.svg" class="main-img">
+          <span class="description"></span>
+        </div>
+        <div class="degrees">
+          <span class="real"></span>
+          <span class="feels-like"></span>
+        </div>
+      </div>
+      
+      <ul class="minor-info">
+        <li class="item">
+          <img src="/images/wind.svg" class="img">
+          <span class="value" id="wind"></span>
+        </li>
+        <li class="item">
+          <img src="/images/clouds.svg" class="img">
+          <span class="value" id="clouds"></span>
+        </li>
+        <li class="item">
+          <img src="/images/humidity.svg" class="img">
+          <span class="value" id="humidity"></span>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+    
+
+  <script src="/script/script.js"></script>
+</body>
+</html>

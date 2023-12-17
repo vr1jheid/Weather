@@ -1,0 +1,270 @@
+/* open-sans-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/open-sans-v36-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/open-sans-v36-latin-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/open-sans-v36-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/open-sans-v36-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/open-sans-v36-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/open-sans-v36-latin-500italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/open-sans-v36-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/open-sans-v36-latin-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/open-sans-v36-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/open-sans-v36-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/open-sans-v36-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-800italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Open Sans";
+  font-style: italic;
+  font-weight: 800;
+  src: url("../fonts/open-sans-v36-latin-800italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 0;
+  border: 3px salmon solid;
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.main-info {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.city {
+  padding: 10px 0;
+  /*   background-color: tomato; */
+  font-size: 4.3rem;
+  text-align: center;
+}
+
+.img-container {
+  width: 45%;
+  height: 300px;
+  /*   border: brown 1px solid; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.img-container .main-img {
+  display: block;
+  width: 100%;
+  height: 80%;
+}
+.img-container .description {
+  display: inline-block;
+  font-size: 2.8rem;
+  text-align: center;
+}
+.img-container .description::first-letter {
+  text-transform: uppercase;
+}
+
+.degrees {
+  width: 45%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*   border: 1px solid tomato; */
+  justify-content: space-between;
+}
+.degrees .real {
+  padding-top: 15px;
+  font-size: 18rem;
+  font-weight: 400;
+  height: 80%;
+}
+.degrees .feels-like {
+  font-size: 2.8rem;
+}
+
+.minor-info {
+  /*   margin-top: 100px; */
+  display: flex;
+  justify-content: space-around;
+}
+.minor-info .item {
+  display: flex;
+  align-items: center;
+}
+.minor-info .item::marker {
+  content: "";
+}
+.minor-info .img {
+  width: 60px;
+  height: 40px;
+  display: block;
+}
+.minor-info .value {
+  font-size: 2rem;
+}
+
+.search-city {
+  width: 100%;
+  padding: 0 20px;
+  margin-bottom: 50px;
+  display: flex;
+  gap: 5px;
+}
+.search-city .search-input {
+  flex-grow: 1;
+  font-size: 2rem;
+  padding: 0 10px;
+  border-radius: 7px;
+}
+.search-city .search-button {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 7px;
+}
+.search-city .search-img {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=styles.css.map */
