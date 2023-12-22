@@ -5,8 +5,7 @@ showWeather("geolocation");
 let searchButton = document.querySelector(".search-button");
 let searchInput = document.querySelector(".search-input");
 
-searchButton.addEventListener("click", searchCity);
-//searchInput.addEventListener("focus", inputHandler);
+console.log(searchInput);
 
 //////////////////////////////////////////////
 
@@ -18,32 +17,28 @@ searchInput.onfocus = () => {
     delay = setTimeout( () => {
       removeSuggestionsList();
       searchCity()
-    }, 1000);
+    }, 200);
   }
 }
 
 searchInput.onblur = () => {
-/*   searchInput.oninput = null;
+  searchInput.oninput = null;
   searchInput.value
-  removeSuggestionsList();
-  suggestionsList.removeEventListener("click", selectSuggestion);
-   */
+  setTimeout( () => removeSuggestionsList(), 500 )
 }
 
 async function searchCity() {
   let searchInput = document.querySelector(".search-input");
   let searchForm = document.querySelector(".search-city");
-  let suggestionsList = document.createElement("ul");
   let request = searchInput.value;
+  if (!request) return;
   let suggestionOptions = new Map;
 
-  if (!request) return;
-  let suggestions = (await getSuggestions(request)).suggestions;
+  let suggestionsList = document.createElement("ul");
 
-  //if (!suggestions.length) suggestionsList.remove();
+  let suggestions = await getSuggestions(request);
     
   showSuggestionsList(suggestions, searchForm);
-  //let suggestionsList = document.querySelector(".suggestions-list")
   suggestionsList.addEventListener("click", selectSuggestion);
 
   function showSuggestionsList(suggestions, position) {
@@ -51,10 +46,10 @@ async function searchCity() {
     suggestionsList.classList.add("suggestions-list");
   
     suggestions.forEach(elem => {
-      if (suggestionsList.children.length > 4) return;
       console.log(elem);
       let suggestion = document.createElement("li")
-
+      //let locationName = elem.data.city && `г. ${elem.data.city}`
+      //console.log(locationName);
       let options = {
         coords: 
           {
@@ -75,11 +70,9 @@ async function searchCity() {
   function selectSuggestion(event) {
     let suggestion = event.target.closest(".suggestion-item");
     if (!suggestion) return;
-
+    console.log(suggestionOptions.get(suggestion));
     showWeather("coords", suggestionOptions.get(suggestion));
 
-    suggestionsList.removeEventListener("click", selectSuggestion);
-    suggestionsList.remove();
     suggestionOptions.clear();
     searchInput.value = "";
   }
@@ -120,7 +113,6 @@ async function showWeather(type, options) {
   clouds.textContent = weatherData.clouds.all + "%";
   humidity.textContent = weatherData.main.humidity + "%";
 
-  //cityDiv.textContent = !options && weatherData.name;
   cityDiv.textContent = !options ? weatherData.name : options.city;
 
   console.log(weatherData);
@@ -137,6 +129,7 @@ async function getWeather(coords){
   });
 
   let url = `https://api.openweathermap.org/data/2.5/weather?${params.toString()}`
+  console.log(url);
   let response = await fetch(url);
   
   return await response.json();
@@ -164,10 +157,16 @@ async function getSuggestions(request) {
   //let response = await fetch("/script/suggestion.json");
   let response = await fetch(url, options)
   console.log("request");
-  return await response.json();
+  let data = await response.json();
+  // Проверка на наличие координат + убираем результат по улице
+  let suggestions = data.suggestions.filter( s => 
+    s.data.geo_lat && s.data.geo_lon && !s.data.street)
+
+  return suggestions;
 }
 
 function removeSuggestionsList() {
   let suggestionsList = document.querySelector(".suggestions-list");
   suggestionsList && suggestionsList.remove();
 }
+

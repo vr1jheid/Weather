@@ -161,7 +161,8 @@ html {
   max-width: 600px;
   margin: 0 auto;
   padding: 30px 0;
-  /*   border: 3px salmon solid; */
+  /*   border: 3px rgb(61, 45, 177) solid; */
+  border-radius: 10px;
 }
 
 .weather {
@@ -177,9 +178,9 @@ html {
 }
 
 .city {
-  padding: 10px 0;
+  padding: 10px;
   /*   background-color: tomato; */
-  font-size: 4.3rem;
+  font-size: 4rem;
   text-align: center;
 }
 
@@ -193,6 +194,7 @@ html {
 }
 .img-container .main-img {
   display: block;
+  padding: 20px;
   width: 100%;
   height: 80%;
 }
@@ -215,8 +217,10 @@ html {
   justify-content: space-between;
 }
 .degrees .real {
-  padding-top: 15px;
-  font-size: 18rem;
+  display: flex;
+  align-items: center;
+  /*     padding-top: 15px; */
+  font-size: 14rem;
   font-weight: 400;
   height: 80%;
 }
@@ -228,6 +232,7 @@ html {
   /*   margin-top: 100px; */
   display: flex;
   justify-content: space-around;
+  padding-right: 10px;
 }
 .minor-info .item {
   display: flex;
@@ -259,8 +264,20 @@ html {
   padding: 20px;
   background-color: thistle;
   border-radius: 5px;
+  /*   &-button{
+      display: block;
+      border: none;
+      background-color: tomato;
+      border-radius: 3px;
+    }
+    &-img{
+      width: 30px;
+      height: 30px;
+    } */
 }
 .search-input {
+  width: 80%;
+  height: 40px;
   padding: 0 10px;
   flex-grow: 1;
   border: none;
@@ -269,15 +286,6 @@ html {
 }
 .search-input:focus-visible {
   outline: none;
-}
-.search-button {
-  border: none;
-  background-color: tomato;
-  border-radius: 3px;
-}
-.search-img {
-  width: 30px;
-  height: 30px;
 }
 
 .suggestions-list {
@@ -307,4 +315,18 @@ html {
 .suggestions-list .suggestion-item:hover {
   background-color: white;
   cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .main-info {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .degrees {
+    width: 100%;
+  }
+  .feels-like {
+    width: 100%;
+    text-align: center;
+  }
 }/*# sourceMappingURL=styles.css.map */
