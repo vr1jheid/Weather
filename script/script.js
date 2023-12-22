@@ -105,7 +105,7 @@ async function showWeather(type, options) {
   console.log(coords);
   weatherData = await getWeather(coords);
 
-  icon.src = `/images/${weatherData.weather.at(0).icon}.svg`;
+  icon.src = `images/${weatherData.weather.at(0).icon}.svg`;
   description.textContent = weatherData.weather[0].description;
   degreesReal.innerHTML = Math.round(weatherData.main.temp) + "&deg;"
   degreesFeel.innerHTML = `Ощущается как ${Math.round(weatherData.main.feels_like)}&deg`
@@ -142,7 +142,7 @@ function getUserCoords() {
 }
 
 async function getSuggestions(request) {
-  var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address";
+  var url = "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address";
   var token = "939440e83c2ea29e4c2473b38a85f59efd56ec08";
   let options = {
     method: "POST",
